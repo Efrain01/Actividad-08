@@ -14,12 +14,15 @@ void Laboratorio::agregarFinal(const Computadora &p){
 }
 
 void Laboratorio::mostrar(){
+    cout << left;
+    cout <<setw(20) << "Sistema Operativo";
+    cout <<setw(6) << "RAM";
+    cout <<setw(6) << "ROM";
+    cout <<setw(15) << "Procesador";
+    cout << endl;
     for (size_t i = 0; i < cont; i++){
         Computadora &p = arreglo[i];
-        cout<<"Sistema Operativo: "<<p.getOs()<<endl;
-        cout<<"Memoria RAM:       "<<p.getRam()<<endl;
-        cout<<"Memoria ROM:       "<<p.getRom()<<endl;
-        cout<<"Procesador:        "<<p.getProcesador()<<endl;
+        cout<< p;
         cout<<endl;
     }
     
