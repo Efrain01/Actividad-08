@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-
+    
     Computadora computadoras[5];
     string cadena;
     int entero;
@@ -18,7 +18,7 @@ int main(){
     Laboratorio lab;
 
     for (size_t i = 0; i < 5; i++){
-        lab.agregarFinal(computadoras[i]);
+        lab <<computadoras[i];
     }
 
     lab.mostrar();
