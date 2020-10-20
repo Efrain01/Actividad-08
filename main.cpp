@@ -11,15 +11,7 @@ int main(){
 
     for (size_t i = 0; i < 5; i++){
         fflush(stdin);
-        cout<<"Sistema Operativo: "; getline(cin,cadena);
-        computadoras[i].setOs(cadena);
-        cout<<"Memoria RAM:       "; cin>>entero;
-        computadoras[i].setRam(entero);
-        cout<<"Memoria ROM:       "; cin>>entero;
-        computadoras[i].setRom(entero);
-        fflush(stdin);
-        cout<<"Procesador:        "; getline(cin,cadena);
-        computadoras[i].setProcesador(cadena);
+        cin>>computadoras[i];
         cout<<endl<<endl;
     }
     
