@@ -25,5 +25,7 @@ void Laboratorio::mostrar(){
         cout<< p;
         cout<<endl;
     }
+
+    
     
 }
