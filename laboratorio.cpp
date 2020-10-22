@@ -30,7 +30,7 @@ void Laboratorio::mostrar(){
 }
 
 void Laboratorio::respaldar_tabla(){
-    ofstream archivo("computadora.txt");
+    ofstream archivo("computadora_tabla.txt");
     if(archivo.is_open()){
         cout << left;
         cout <<setw(20) << "Sistema Operativo";
