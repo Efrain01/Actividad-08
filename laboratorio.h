@@ -11,6 +11,9 @@ class Laboratorio{
         Laboratorio();
         void agregarFinal(const Computadora &p);
         void mostrar();
+        void respaldar_tabla();
+        void respaldar();
+        void recuperar();
 
     friend Laboratorio& operator<<(Laboratorio &v, const Computadora &p){
         v.agregarFinal(p);
