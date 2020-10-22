@@ -22,6 +22,8 @@ int main(){
     }
 
     lab.mostrar();
+    lab.respaldar_tabla();
+    lab.respaldar();
 
     system("pause");
     return 0;
