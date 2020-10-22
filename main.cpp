@@ -24,6 +24,15 @@ int main(){
     lab.mostrar();
     lab.respaldar_tabla();
     lab.respaldar();
+    
+    system("pause");
+    system("cls");
+
+    cout<<"Mostrando datos recuperados"<<endl<<endl;
+
+    Laboratorio l;
+    l.recuperar();
+    l.mostrar();
 
     system("pause");
     return 0;
