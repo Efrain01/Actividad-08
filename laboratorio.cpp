@@ -32,12 +32,12 @@ void Laboratorio::mostrar(){
 void Laboratorio::respaldar_tabla(){
     ofstream archivo("computadora_tabla.txt");
     if(archivo.is_open()){
-        cout << left;
-        cout <<setw(20) << "Sistema Operativo";
-        cout <<setw(6) << "RAM";
-        cout <<setw(6) << "ROM";
-        cout <<setw(15) << "Procesador";
-        cout << endl;
+        archivo << left;
+        archivo <<setw(20) << "Sistema Operativo";
+        archivo <<setw(6) << "RAM";
+        archivo <<setw(6) << "ROM";
+        archivo <<setw(15) << "Procesador";
+        archivo << endl;
         for (size_t i = 0; i < cont; i++){
             Computadora &p = arreglo[i];
             archivo << p;
@@ -56,6 +56,38 @@ void Laboratorio::respaldar(){
             archivo << p.getRom()<<endl;
             archivo << p.getProcesador()<<endl;
         }
+    }
+    archivo.close();
+}
+
+void Laboratorio::recuperar(){
+    ifstream archivo("computadora.txt");
+    if(archivo.is_open()){
+        string temp;
+        int ram, rom;
+        Computadora p;
+
+        while (true){
+            getline(archivo, temp);
+            if(archivo.eof()){
+                break;
+            }
+            p.setOs(temp);
+
+            getline(archivo, temp);
+            ram = stoi(temp);
+            p.setRam(ram);
+
+            getline(archivo, temp);
+            rom = stoi(temp);
+            p.setRom(rom);
+
+            getline(archivo, temp);
+            p.setProcesador(temp);
+
+            agregarFinal(p);
+        }
+        
     }
     archivo.close();
 }
