@@ -46,7 +46,7 @@ void Laboratorio::respaldar_tabla(){
     archivo.close();
 }
 
-void Laboratorio::respaldar_tabla(){
+void Laboratorio::respaldar(){
     ofstream archivo("computadora.txt");
     if(archivo.is_open()){
         for (size_t i = 0; i < cont; i++){
